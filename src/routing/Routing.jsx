@@ -16,6 +16,9 @@ import Otros from "../components/querys/Otros";
 import { AnimatedRoute } from "./AnimatedRoute";
 import UpdateClients from "../components/clients/UpdateClients";
 import Clientes from "../components/querys/Clientes";
+import Historial from "../components/clients/Historial";
+import UpdateHistorial from "../components/clients/UpdateHistorial";
+import HistorialUpd from "../components/clients/HistorialUpd";
 
 const Routing = () => {
   const location = useLocation();
@@ -37,6 +40,9 @@ const Routing = () => {
         <Route path="consultar-balance" element={<AnimatedRoute><Balance /></AnimatedRoute>}/>
         <Route path="modificar-clientes" element={<AnimatedRoute><UpdateClients /></AnimatedRoute>}/>
         <Route path="consulta-clientes" element={<AnimatedRoute><Clientes /></AnimatedRoute>}/>
+        <Route path="historial-clientes" element={<AnimatedRoute><Historial /></AnimatedRoute>}/>
+        <Route path="modificar-historial" element={<AnimatedRoute><UpdateHistorial /></AnimatedRoute>}/>
+        <Route path="modificar-historia/:id" element={<AnimatedRoute><HistorialUpd /></AnimatedRoute>}/>
       </Route>
     </Routes>
   );

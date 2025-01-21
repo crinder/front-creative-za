@@ -20,6 +20,7 @@ const Attendance = () => {
     const [aceptar, setAceptar] = useState(false);
     const [variant, setVariant] = useState();
     const [message, setMessage] = useState();
+    const [clientesNew, setClientesNew] = useState([]);
 
     const title = 'Asistencias';
     const [showAlert, setShowAlert] = useState(false);
@@ -130,7 +131,7 @@ const Attendance = () => {
 
             <Message showAlert={showAlert} tipo={variant} message={message} />
 
-            <Find title={title} clientesAct={clientesAct} setClientesAct={setClientesAct} isFocused={isFocused} setIsFocuset={setIsFocuset} />
+            <Find title={title} clientesAct={clientesAct} setClientesAct={setClientesAct} isFocused={isFocused} setIsFocuset={setIsFocuset} ind={null} setClientesNew={setClientesNew} />
 
             <div className={`content__invoice ${isFocused ? 'opacity__element' : ''}`} >
 

@@ -51,6 +51,7 @@
   text-align: center;
   transition: background 100ms ease-in;
 }
+
 /*
 .button:hover{
   background: #306ccc;
@@ -179,6 +180,7 @@ form {
 form.form__signin {
   z-index: 2;
 }
+
 form.form__signup {
   z-index: 1;
   opacity: 0;
@@ -240,7 +242,7 @@ form.form__signup {
   margin-top: 0.9rem;
 }
 
-.input__control:placeholder-shown ~ .input__label {
+.input__control:placeholder-shown~.input__label {
   cursor: text;
   color: #aaaab2;
   top: 0.8rem;
@@ -248,7 +250,7 @@ form.form__signup {
 }
 
 .input__label,
-.input__control:focus ~ .input__label {
+.input__control:focus~.input__label {
   position: absolute;
   top: -1.8rem;
   display: block;
@@ -259,7 +261,7 @@ form.form__signup {
   font-weight: 600;
 }
 
-.input__control:focus ~ .input__label {
+.input__control:focus~.input__label {
   color: #5995fd;
   background: linear-gradient(to top, #f0f0f0 70%, #fff 30%);
 }
@@ -339,7 +341,7 @@ form.form__signup {
   border-radius: 10px;
   background: transparent;
   backdrop-filter: blur(4px);
-  
+
 
   -webkit-box-shadow: 0px 31px 44px -24px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 31px 44px -24px rgba(0, 0, 0, 0.75);
@@ -412,40 +414,41 @@ form.form__signup {
 .container.sign-up-mode .right-panel {
   pointer-events: all;
 }
+
 .container.sign-up-mode .signin-signup {
   left: 25%;
 }
 
 /***** home********/
 
-.home__bubbles{
+.home__bubbles {
   position: relative;
 }
 
-.bubbles__list{
+.bubbles__list {
   z-index: 10;
 }
 
-.bubbles__list{
+.bubbles__list {
   display: flex;
 }
 
-.img__panel{
+.img__panel {
   /**/
   width: 400px;
   margin: 6rem;
 }
 
-.panel__img__home{
+.panel__img__home {
   position: relative;
   display: flex;
 }
 
-.image__left{
+.image__left {
   height: 400px;
 }
 
-.plants--img{
+.plants--img {
   position: absolute;
   height: 200px;
   top: 490px;
@@ -453,7 +456,7 @@ form.form__signup {
 }
 
 
-.list__item-bubble-1{
+.list__item-bubble-1 {
   top: 34%;
   left: 50%;
   animation: moveShape3 20s infinite;
@@ -461,79 +464,79 @@ form.form__signup {
 }
 
 @keyframes moveShape3 {
-   
-   0%{
-       transform: translateX(0) translateY(0);
-   }
 
-   40%{
-       transform: translateX(-50px) translateY(100px);
-   }
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  40% {
+    transform: translateX(-50px) translateY(100px);
+  }
 
 
-   75%{
-       transform: translateX(800px) translateY(-300px);
-   }
+  75% {
+    transform: translateX(800px) translateY(-300px);
+  }
 
-   100%{
-       transform: translateX(0) translateY(0);
-   }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
 
 }
 
-.list__item-bubble-2{
+.list__item-bubble-2 {
   bottom: 24rem;
   left: 45%;
   animation: moveShape3 25s infinite;
 }
 
 
-@keyframes showRigth{
+@keyframes showRigth {
 
-  0%{
-      transform: translateX(50%);
+  0% {
+    transform: translateX(50%);
   }
 
-  100%{
-      transform: translateX(0%);
+  100% {
+    transform: translateX(0%);
   }
 
 }
 
-.list__item-bubble-5{
+.list__item-bubble-5 {
   bottom: 10rem;
   left: 40%;
   animation: moveShape3 35s infinite;
 }
 
-.list__item-bubble-4 .bubble-img{
+.list__item-bubble-4 .bubble-img {
   opacity: 0.5;
   width: 7.5rem;
   animation: moveShape4 30s infinite;
 }
 
 @keyframes moveShape4 {
-  
-  0%{
-      transform: translateX(0) translateY(0);
+
+  0% {
+    transform: translateX(0) translateY(0);
   }
 
-  40%{
-      transform: translateX(-50px) translateY(200px);
+  40% {
+    transform: translateX(-50px) translateY(200px);
   }
 
 
-  75%{
-      transform: translateX(-500px)
+  75% {
+    transform: translateX(-500px)
   }
 
-  100%{
-      transform: translateX(0) translateY(0);
+  100% {
+    transform: translateX(0) translateY(0);
   }
 
 }
 
-.list__item-bubble-6{
+.list__item-bubble-6 {
   position: absolute;
   top: 0;
   z-index: 99;
@@ -595,6 +598,7 @@ form.form__signup {
     top: -90px;
     right: 300px;
   }
+
   .background-lines {
     width: 300px;
     height: 300px;
@@ -634,6 +638,7 @@ form.form__signup {
   bottom: 0;
   z-index: 1;
 }
+
 @media (max-width: 768px) {
   .footer__container {
     display: none;
@@ -689,11 +694,13 @@ form.form__signup {
 }
 
 @media (max-width: 768px) {
+
   .search__wrapper input,
   .search__icon {
     padding: 3rem;
   }
 }
+
 .search__wrapper .search__icon {
   position: absolute;
   z-index: 2;
@@ -825,17 +832,17 @@ form.form__signup {
   cursor: pointer;
 }
 
-  .dark  .sidebar-links li a:hover svg,
-  .dark  .sidebar-links li .nav__link--dropdown:hover svg {
-    color: var(--sidebar-primary-dark);
-  }
+.dark .sidebar-links li a:hover svg,
+.dark .sidebar-links li .nav__link--dropdown:hover svg {
+  color: var(--sidebar-primary-dark);
+}
 
-  .dark  .sidebar-links li a:hover,
-  .dark  .sidebar-links li .nav__link--dropdown:hover {
-    color: var(--sidebar-primary-dark);
-    background: var(--sidebar-bg-hover-dark);
-    border-radius: 10px;
-  }
+.dark .sidebar-links li a:hover,
+.dark .sidebar-links li .nav__link--dropdown:hover {
+  color: var(--sidebar-primary-dark);
+  background: var(--sidebar-bg-hover-dark);
+  border-radius: 10px;
+}
 
 
 .sidebar-links li a,
@@ -869,7 +876,7 @@ form.form__signup {
 }
 
 
-.sidebar-links .active:hover{
+.sidebar-links .active:hover {
   background: var(--sidebar-primary-hover);
 }
 
@@ -885,18 +892,18 @@ form.form__signup {
 }
 
 
-  .dark  .sidebar-links .active:hover {
-    background: var(--sidebar-bg-hover-dark);
-  }
+.dark .sidebar-links .active:hover {
+  background: var(--sidebar-bg-hover-dark);
+}
 
-  .dark  .sidebar-links .active {
-    background: var(--sidebar-bg-hover-dark);
-    color: var(--sidebar-text-hover-dark);
-  }
+.dark .sidebar-links .active {
+  background: var(--sidebar-bg-hover-dark);
+  color: var(--sidebar-text-hover-dark);
+}
 
-  .dark  .sidebar-links .active svg {
-    stroke: var(--sidebar-text-hover-dark);
-  }
+.dark .sidebar-links .active svg {
+  stroke: var(--sidebar-text-hover-dark);
+}
 
 
 .sidebar-links li a:hover svg {
@@ -909,14 +916,14 @@ form.form__signup {
 }
 
 
-  .dark .sidebar-links li a:hover svg {
-    stroke: var(--sidebar-text-hover-dark);
-    color: var(--sidebar-text-hover-dark);
-  }
+.dark .sidebar-links li a:hover svg {
+  stroke: var(--sidebar-text-hover-dark);
+  color: var(--sidebar-text-hover-dark);
+}
 
-  .dark .sidebar-links li a:hover {
-    color: var(--sidebar-text-hover-dark);
-  }
+.dark .sidebar-links li a:hover {
+  color: var(--sidebar-text-hover-dark);
+}
 
 
 /* ?tooltip */
@@ -1016,11 +1023,9 @@ form.form__signup {
   font-size: 1.8rem;
   color: var(--neutral);
   border-radius: 1.2rem;
-  background: linear-gradient(
-    90deg,
-    var(--sidebar-primary) -0.38%,
-    var(--sidebar-primary-light) 100.02%
-  );
+  background: linear-gradient(90deg,
+      var(--sidebar-primary) -0.38%,
+      var(--sidebar-primary-light) 100.02%);
 }
 
 .sidebar__action .progress-bar {
@@ -1032,11 +1037,9 @@ form.form__signup {
   font-weight: 600;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(
-      closest-side,
+  background: radial-gradient(closest-side,
       var(--cta-background) 79%,
-      transparent 80% 100%
-    ),
+      transparent 80% 100%),
     conic-gradient(var(--sidebar-primary) 60%, var(--cta-background-darker) 0);
   margin-bottom: 1.6rem;
 }
@@ -1179,8 +1182,9 @@ form.form__signup {
 
 .client__control {
   width: 100%;
-  margin: 0 auto ;
+  margin: 0 auto;
 }
+
 .forms__input {
   display: flex;
   flex-direction: column;
@@ -1288,17 +1292,17 @@ form.form__signup {
 .table-widget {
   background: var(--table-background);
   padding: 1.5rem;
-  
+
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   text-align: left;
   overflow-x: auto;
 }
 
-.dark .table-widget{
+.dark .table-widget {
   background-color: #0f172a;
   color: #e2e8f0;
-  
+
 }
 
 .table-widget table {
@@ -1322,7 +1326,7 @@ form.form__signup {
 
 .table-widget tfoot {
   margin-top: 1rem;
- 
+
 }
 
 .table-widget td {
@@ -1370,19 +1374,19 @@ form.form__signup {
 }
 
 .nav-tabs .nav-item.show .nav-link,
-  .nav-tabs .nav-link.active {
-    color: #f8fafc;
-    background-color: #f5f5f5;
-    
-  }
+.nav-tabs .nav-link.active {
+  color: #f8fafc;
+  background-color: #f5f5f5;
+
+}
 
 
-  .dark .nav-tabs .nav-item.show .nav-link,
-  .dark .nav-tabs .nav-link.active {
-    color: #f8fafc;
-    background-color: #1e293b;
-    border-color: #cbd5e11a;
-  }
+.dark .nav-tabs .nav-item.show .nav-link,
+.dark .nav-tabs .nav-link.active {
+  color: #f8fafc;
+  background-color: #1e293b;
+  border-color: #cbd5e11a;
+}
 
 
 .team-member-profile img {
@@ -1520,10 +1524,11 @@ form.form__signup {
 
 /* Bottom Nav */
 
-.nav__titles{
+.nav__titles {
   position: absolute;
   top: 0;
 }
+
 .link__dropdown {
   transition: all 0.6s ease-in-out !important;
 }
@@ -1597,6 +1602,7 @@ form.form__signup {
     opacity: 1;
     transform: translateY(0px);
   }
+
   to {
     opacity: 0;
     transform: translateY(-100px);
@@ -1634,9 +1640,7 @@ form.form__signup {
 }
 
 .navList-in {
-  animation: list-in .3s forwards
-    linear(
-      0 0%,
+  animation: list-in .3s forwards linear(0 0%,
       0 1.8%,
       0.01 3.6%,
       0.03 6.35%,
@@ -1658,35 +1662,33 @@ form.form__signup {
       0.98 64%,
       0.99 74.4%,
       1 86.4%,
-      1 100%
-    );
+      1 100%);
 }
+
 .navList-out {
-  animation: list-out .3s forwards linear(
-    0 0%,
-    0 1.8%,
-    0.01 3.6%,
-    0.03 6.35%,
-    0.07 9.1%,
-    0.13 11.4%,
-    0.19 13.4%,
-    0.27 15%,
-    0.34 16.1%,
-    0.54 18.35%,
-    0.66 20.6%,
-    0.72 22.4%,
-    0.77 24.6%,
-    0.81 27.3%,
-    0.85 30.4%,
-    0.88 35.1%,
-    0.92 40.6%,
-    0.94 47.2%,
-    0.96 55%,
-    0.98 64%,
-    0.99 74.4%,
-    1 86.4%,
-    1 100%
-  );
+  animation: list-out .3s forwards linear(0 0%,
+      0 1.8%,
+      0.01 3.6%,
+      0.03 6.35%,
+      0.07 9.1%,
+      0.13 11.4%,
+      0.19 13.4%,
+      0.27 15%,
+      0.34 16.1%,
+      0.54 18.35%,
+      0.66 20.6%,
+      0.72 22.4%,
+      0.77 24.6%,
+      0.81 27.3%,
+      0.85 30.4%,
+      0.88 35.1%,
+      0.92 40.6%,
+      0.94 47.2%,
+      0.96 55%,
+      0.98 64%,
+      0.99 74.4%,
+      1 86.4%,
+      1 100%);
 }
 
 @keyframes list-in {
@@ -1696,7 +1698,7 @@ form.form__signup {
     opacity: 0;
   }
 
-  
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -1709,7 +1711,7 @@ form.form__signup {
     opacity: 1;
   }
 
-  
+
 
   100% {
     transform: scale(0);
@@ -1718,21 +1720,24 @@ form.form__signup {
   }
 }
 
- .fade-enter {
+.fade-enter {
   opacity: 0;
   transform: translateY(20px);
 }
+
 .fade-enter-active {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 300ms, transform 300ms;
 }
+
 .fade-exit {
   opacity: 1;
-} 
+}
+
 .fade-exit-active {
   display: none;
-} 
+}
 
 
 .dark .accordion-button:not(.collapsed) {
@@ -1742,12 +1747,12 @@ form.form__signup {
 }
 
 .accordion-body {
- padding: 0;
- border: none;
+  padding: 0;
+  border: none;
 }
 
 .dark .accordion-item {
-  
+
   border: 1px solid #1b1f2cab;
 }
 
@@ -1839,6 +1844,7 @@ form.form__signup {
 .toast-toast .progress-error:before {
   background-color: red;
 }
+
 .toast-toast .progress-danger:before {
   background-color: yellow;
 }
@@ -1869,7 +1875,7 @@ form.form__signup {
   transition: 300ms ease-in-out;
 }
 
-.align__div{
+.align__div {
   display: flex;
   justify-content: center;
 }
@@ -1878,7 +1884,7 @@ form.form__signup {
   background-color: #2355e0;
 }
 
-.toast-toast.active ~ button {
+.toast-toast.active~button {
   pointer-events: none;
 }
 
@@ -1886,36 +1892,36 @@ form.form__signup {
 
 /****/
 
-.title__thead{
+.title__thead {
   font-size: 2rem;
   font-weight: 500;
   padding: 0.5rem;
   font-weight: bold;
 }
 
-.title__thead--th{
+.title__thead--th {
   font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem;
   font-weight: bold;
 }
 
-.tfoot__td{
+.tfoot__td {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0.5rem;
 }
 
-.client-edit:hover{
-    background-color: #28a2ff;
-    cursor: pointer;
+.client-edit:hover {
+  background-color: #28a2ff;
+  cursor: pointer;
 }
 
-.margin-l2{
+.margin-l2 {
   margin-left: 2rem;
 }
 
-.header__logo{
+.header__logo {
   height: 80px;
   width: 100px;
   margin-left: 40px;
@@ -1923,20 +1929,93 @@ form.form__signup {
   transition: all 300ms ease-in-out;
 }
 
-.header__img:hover{
+.header__img:hover {
   transform: scale(1.1);
 }
 
-.header__img{
+.header__img {
   width: 150px;
   height: 90px;
 }
 
-.action__icon{
+.action__icon {
   cursor: pointer;
   font-size: 15px;
 }
 
+.client__historial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text__client{
+  width: 500px;
+  height: 200px;
+  resize: none;
+  background-color: rgb(15 23 42/1);
+  border: 1px solid white;
+  border-radius:  10px;
+  padding: 3rem;
+}
+
+.textarea__modal{
+  width: 500px;
+  height: 200px;
+  resize: none;
+  background-color: rgb(15 23 42/1);
+  border: 1px solid white;
+  border-radius:  10px;
+  padding: 3rem;
+}
+
+.historial__client{
+  width: 500px;
+  height: 200px;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.content__historial{
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;
+}
+
+.button__historial{
+  width: 50%;
+  padding: 1rem;
+  border: 1px solid #dddddd;
+  border-radius: 1rem;
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.historial__span{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 2rem;
+}
+
+.historial__icon{
+  margin-left: 2rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.historial__icon:hover{
+  font-size: 2.1rem
+}
+
+
+
+.table__details, .details__clientes{ 
+  width: 50%;
+ margin: 0 auto;
+}
 
 @tailwind base;
 @tailwind components;

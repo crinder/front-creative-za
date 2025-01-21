@@ -10,7 +10,7 @@ import Message from "../utils/Message";
 
 const InvoicesTab = ({ tabkey, clients, clientesAct }) => {
 
-  const [invoicesGet, setInvoiceGet] = useState({});
+  const [invoiceGet, setInvoiceGet] = useState({});
   const { token, isLoading } = useAuth();
 
   const [aceptar, setAceptar] = useState(false);
@@ -73,14 +73,19 @@ const InvoicesTab = ({ tabkey, clients, clientesAct }) => {
   useEffect(() => {
     if (clients.length > 0) {
       getInvoices();
+    }else{
+      setInvoiceGet([]);
     }
 
   }, [tabkey]);
 
   useEffect(() => {
+
     if (clients.length > 0) {
       getInvoices();
-    }
+    }else{
+      setInvoiceGet([]);
+    }   
 
   }, [clients]);
 
@@ -166,21 +171,13 @@ const InvoicesTab = ({ tabkey, clients, clientesAct }) => {
             </tr>
           </thead>
           <tbody id="team-member-rows">
-            {invoicesGet.length > 0 && invoicesGet.map(invoice => {
+            {invoiceGet.length > 0 && invoiceGet.map(invoice => {
               return (
                 <tr key={invoice._id} 
                 className="odd:bg-white dark:odd:bg-slate-900 even:bg-gray-50 dark:even:bg-slate-700  border-b  text-center dark:text-slate-300 text-xl">
                   <td className="team-member-profile px-6 py-4">
-                    {/*<img src="${teamMember.src}" alt="${teamMember.name}"/>*/}
                     <span className="profile-info">
-
-                      <span className="profile-info__name">
-                        {invoice.id_client.name}
-                      </span>
-
-                      {/*<span className='profile-info__alias'>
-                          
-                        </span> */}
+                      <span className="profile-info__name">{invoice.id_client.name}</span>
                     </span>
                   </td>
                   <td className="px-6 py-4 ">

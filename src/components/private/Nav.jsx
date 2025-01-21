@@ -87,6 +87,20 @@ const Nav = () => {
                                             <span className="tooltip__content">Modificar </span>
                                         </NavLink>
                                     </li>
+                                    <li>
+                                        <NavLink to="/creative-za/historial-clientes" title="modificar-clientes" className="nav__link" disabled>
+                                            <FontAwesomeIcon icon={faPen}/>
+                                            <span className="link hide">Crear historial</span>
+                                            <span className="tooltip__content">Crear historial</span>
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/creative-za/modificar-historial" title="modificar-historial" className="nav__link" disabled>
+                                            <FontAwesomeIcon icon={faPen}/>
+                                            <span className="link hide">Modificar historial</span>
+                                            <span className="tooltip__content">Modificar historial</span>
+                                        </NavLink>
+                                    </li>
                                 </ul>
                             </div>
                         </li>

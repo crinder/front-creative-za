@@ -4,10 +4,9 @@ import { React, useEffect, useState } from "react";
 import { useClient } from '../context/AuthClient';
 import Global from "../../helpers/Global";
 import { useAuth } from "../context/AuthContext";
-import Toasts from "../utils/Toasts";
 import { InputSearch } from "../invoice/InputSearch";
 
-const Find = ({clientResponse,setClientResponse}) => {
+const Find = ({ clientResponse, setClientResponse }) => {
 
     const [inputClient, setInputClient] = useState("");
     const [requestClient, setRequestClient] = useState("");
@@ -36,8 +35,8 @@ const Find = ({clientResponse,setClientResponse}) => {
     };
 
     const temporalClient = (client) => {
-        
-        console.log('find...',client);
+
+        console.log('find...', client);
 
         setClientResponse(client);
     };
@@ -74,7 +73,7 @@ const Find = ({clientResponse,setClientResponse}) => {
             <section>
                 <div className="search__wrapper relative">
                     <InputSearch changeInput={changeInput} handleBlur={handleBlur} handleFocus={handleFocus} />
-                </div> 
+                </div>
 
                 <div className={`navList-in block margin-l2 absolute z-10 max-h-80 w-2/3 pl-8 bg-slate-100 outline overflow-auto border-none cursor-pointer dark:bg-slate-800 ${!isFocused ? 'ocultar_elemento' : ''}  `}>
                     {requestClient.length > 0 &&

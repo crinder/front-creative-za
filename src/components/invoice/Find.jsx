@@ -6,7 +6,7 @@ import { useAuth } from "../context/AuthContext";
 import Toasts from "../utils/Toasts";
 import { InputSearch } from "./InputSearch";
 
-const Find = ({title, clientesAct, setClientesAct,  isFocused,  setIsFocuset,  ind,}) => {
+const Find = ({title, clientesAct, setClientesAct,  isFocused,  setIsFocuset,  ind, setClientesNew = []}) => {
 
   const { token, isLoading } = useAuth();
   const [inputClient, setInputClient] = useState("");
@@ -31,8 +31,11 @@ const Find = ({title, clientesAct, setClientesAct,  isFocused,  setIsFocuset,  i
   }, [inputClient]);
 
   useEffect(() => {
+
+    console.log('find clientResponse...',clientResponse.length, 'clientesAct...',clientesAct.length, 'ind...',ind);
     if (clientResponse.length > 0) {
       setClientesAct(clientResponse);
+      setClientesNew(clientResponse);
     }
 
     if (clientResponse.length == 0 && clientesAct.length > 0) {
@@ -40,7 +43,8 @@ const Find = ({title, clientesAct, setClientesAct,  isFocused,  setIsFocuset,  i
     }
 
     if (ind == "R") {
-      setClientesAct({});
+      setClientesAct(clientResponse);
+  
     }
   }, [clientResponse]);
 
@@ -118,7 +122,7 @@ const Find = ({title, clientesAct, setClientesAct,  isFocused,  setIsFocuset,  i
             clientResponse.map((select) => {
               return (
                 <div className="toasts__client" key={select.id}>
-                  <Toasts name={select.nombre} id={select.id} clientResponse={clientResponse} setClientResponse={setClientResponse}/>
+                  <Toasts name={select.nombre} id={select.id} clientResponse={clientResponse} setClientResponse={setClientResponse} setClientesAct={setClientesAct} setClientesNew={setClientesNew}/>
                 </div>
               );
             })}

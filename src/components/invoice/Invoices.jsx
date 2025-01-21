@@ -15,6 +15,7 @@ const Invoices = () => {
   const { clientesAct, setClientesAct, isFocused, setIsFocuset,limpiarClient } = useClient();
   const title = 'Facturas';
   const location = useLocation();
+  const [clientesNew, setClientesNew] = useState([]);
 
   let ind = location.state?.ind;
 
@@ -27,7 +28,7 @@ const Invoices = () => {
   return (
     <div className='content dark:text-slate-100 dark:border-slate-300/10'>
 
-      <Find title={title} clientesAct={clientesAct} setClientesAct={setClientesAct} isFocused={isFocused} setIsFocuset={setIsFocuset} ind={ind} />
+      <Find title={title} clientesAct={clientesAct} setClientesAct={setClientesAct} isFocused={isFocused} setIsFocuset={setIsFocuset} ind={ind} setClientesNew={setClientesNew} />
       <div className={`content__invoice ${isFocused ? 'opacity__element' : ''}`} >
 
         <section className='tab__invoice'>
